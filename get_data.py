@@ -69,6 +69,14 @@ def get_person_information():
     full_data.extend(data_additional_info)
 
 
+    words_to_delete = input("Enter words to delete (separated by commas): ")
+    delete_list = [word.strip() for word in words_to_delete.split(',')]
+
+    for word in delete_list:
+        full_data.remove(word)
+        full_data.remove(word.upper())
+
+
     return full_data
 
 def remove_duplicates(data):
