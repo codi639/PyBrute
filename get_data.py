@@ -78,6 +78,7 @@ def get_person_information():
 
 
     return full_data
+    
 
 def remove_duplicates(data):
     unique_data = []
@@ -89,6 +90,7 @@ def remove_duplicates(data):
         unique_data.append(list(unique_item))
 
     return unique_data
+    
 
 def generate_case_variants(persons_info):
     case_variants = []
@@ -101,10 +103,7 @@ def generate_case_variants(persons_info):
         case_variants.append(case_variant_lower)
 
     return case_variants
-
-def write_to_file(combination, file_path):
-    with open(file_path, 'w') as file:
-        file.write(combination + '\n')
+    
 
 def generate_combinations(persons_info, additional_info, file_path):
     all_words = persons_info + additional_info
